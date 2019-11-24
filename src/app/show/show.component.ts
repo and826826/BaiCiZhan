@@ -15,8 +15,7 @@ export class ShowComponent implements OnInit {
     this.getwords();
   }
   getwords(): void {
-    this.wordservice.getwords().subscribe(words=>this.words=words);
-    
+    this.wordservice.getwords().subscribe(words => this.words = words);
 
   }
 

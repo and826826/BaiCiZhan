@@ -22,5 +22,14 @@ export class WordService {
   addWord(word:Word):Observable<Word>{
     return this.httpcilent.post<Word>(this.wordUrl,word);
   }
+  //更新
+  updateWord(word:Word):Observable<Word>{
+    return this.httpcilent.put<Word>(this.wordUrl,word);
+  }
+  //删除
+  deleteById(id:String):Observable<Word>{
+    return this.httpcilent.delete<Word>(`${this.wordUrl}/${id}`);
+  }
+  }
 
-}
+

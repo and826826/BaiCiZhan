@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowComponent } from './show/show.component';
 import { from } from 'rxjs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
