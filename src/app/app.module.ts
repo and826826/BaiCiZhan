@@ -25,12 +25,23 @@ import {
   MatGridListModule,
   MatAutocompleteModule,
 } from '@angular/material';
+import { WordshowComponent } from './wordshow/wordshow.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { WordDetailsComponent } from './word-details/word-details.component';
+import { MasterComponent } from './master/master.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CollectComponent } from './collect/collect.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowComponent
+    ShowComponent,
+    WordshowComponent,
+    WordDetailsComponent,
+    MasterComponent,
+    CollectComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +65,9 @@ import {
     MatTooltipModule,
     MatGridListModule,
     MatAutocompleteModule,
+    MatMenuModule,
+    LayoutModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

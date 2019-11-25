@@ -1,10 +1,14 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-<mat-toolbar  color="primary" class="disaplay-4">
-    <span>百词斩</span>
-    <button mat-button>首页</button>
-    <button  mat-button>复习</button>
-
-
+ <!-- 主界面 -->
+ <!-- 默认路由指向此处 -->
+<mat-toolbar  color="primary" class="demo-app-header" >
+        <mat-icon>百词斩</mat-icon>
+    <button  mat-button  class="button1_relative"  routerLink="/wordshow">首页</button>
+    <mat-menu #appMenu="matMenu">
+                <button mat-menu-item routerLink="/master" >已学单词</button>
+                <button mat-menu-item routerLink="/collect">收藏单词</button>
+        </mat-menu>
+    <button mat-button [matMenuTriggerFor]="appMenu"  class="button1_relative ">
+        复习
+    </button>
 </mat-toolbar>
-<h1 class="mat-display-3">Jackdaws love my big sphinx of quartz.</h1>
-<h2 class="mat-h2">The quick brown fox jumps over the lazy dog.</h2>
+<!-- 只显示头部 --> 

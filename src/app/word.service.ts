@@ -8,9 +8,8 @@ import { Observable } from 'rxjs';
 export class WordService {
   private wordUrl= 'http://127.0.0.1:2403/vacabulary';
 
-
   constructor(private httpcilent: HttpClient) { }
-  //获取所有的单词，返回的是object数组
+  //获取所有的单词，返回的是同数目的object数组
   getwords():Observable<Word[]>{
     return this.httpcilent.get<Word[]>(this.wordUrl);
   }
@@ -18,18 +17,28 @@ export class WordService {
   getWordById(id:String):Observable<Word>{
     return this.httpcilent.get<Word>(`${this.wordUrl}/${id}`);
   }
-  //添加一个单词
+
+  //添加一个单词，添加单词后要更新，否则假添加
   addWord(word:Word):Observable<Word>{
     return this.httpcilent.post<Word>(this.wordUrl,word);
   }
-  //更新
+  //更新，添加后比执行
   updateWord(word:Word):Observable<Word>{
     return this.httpcilent.put<Word>(this.wordUrl,word);
   }
-  //删除
+  //通过id删除
   deleteById(id:String):Observable<Word>{
     return this.httpcilent.delete<Word>(`${this.wordUrl}/${id}`);
   }
+  //获取收藏单词
+  getCollectedWord():Observable<Word[]>{
+    return this.httpcilent.get<Word[]>(`${this.wordUrl}?collect=true`);
+  }
+  //通过name搜索单词
+  searchByname(names:String):Observable<Word[]>{
+    return this.httpcilent.get<Word[]>(`${this.wordUrl}?name=names`);
+  }
+
   }
 
 
