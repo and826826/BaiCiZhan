@@ -12,6 +12,7 @@ export class WordshowComponent {
   /** Based on the screen size, switch from standard to one column per row */
   mainWords:Word[];
 
+
  getMainWords():void{
    this.wordservice.getCollectedWord().subscribe(words =>this.mainWords=words);
 

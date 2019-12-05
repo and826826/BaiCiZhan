@@ -1,7 +1,12 @@
 .grid-container {
-  margin: 20px;
+  position: relative;
+  left: 20px;
+  top: 60px;
 }
-
+.card{
+  width: 100px;
+  height: 100px;
+}
 .dashboard-card {
   position: absolute;
   top: 15px;
@@ -9,7 +14,11 @@
   right: 15px;
   bottom: 15px;
 }
-
+.table{
+  margin: 60px;
+  position: relative;
+  top: 40px;
+}
 .more-button {
   position: absolute;
   top: 5px;

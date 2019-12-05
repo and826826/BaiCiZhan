@@ -25,6 +25,14 @@ import {
   MatGridListModule,
   MatAutocompleteModule,
 } from '@angular/material';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 import { WordshowComponent } from './wordshow/wordshow.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -32,6 +40,7 @@ import { WordDetailsComponent } from './word-details/word-details.component';
 import { MasterComponent } from './master/master.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CollectComponent } from './collect/collect.component';
+import { AllwordsComponent } from './allwords/allwords.component';
 
 
 @NgModule({
@@ -41,7 +50,8 @@ import { CollectComponent } from './collect/collect.component';
     WordshowComponent,
     WordDetailsComponent,
     MasterComponent,
-    CollectComponent
+    CollectComponent,
+    AllwordsComponent
   ],
   imports: [
     BrowserModule,

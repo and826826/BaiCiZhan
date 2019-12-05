@@ -1,14 +1,17 @@
  <!-- 主界面 -->
  <!-- 默认路由指向此处 -->
 <mat-toolbar  color="primary" class="demo-app-header" >
-        <mat-icon>百词斩</mat-icon>
+        <mat-icon  >百词斩</mat-icon>
     <button  mat-button  class="button1_relative"  routerLink="/wordshow">首页</button>
+    <button  mat-button  class="button1_relative"  routerLink="/allwords">所有单词</button>
     <mat-menu #appMenu="matMenu">
-                <button mat-menu-item routerLink="/master" >已学单词</button>
-                <button mat-menu-item routerLink="/collect">收藏单词</button>
+                
+                <button mat-menu-item routerLink="/collected" style="color:rgb(127, 204, 255);">收藏单词</button>
+                <button mat-menu-item routerLink="/master" style="color:rgb(127, 204, 255);">已学单词</button>
         </mat-menu>
     <button mat-button [matMenuTriggerFor]="appMenu"  class="button1_relative ">
         复习
     </button>
 </mat-toolbar>
 <!-- 只显示头部 --> 
+<router-outlet></router-outlet>
