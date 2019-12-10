@@ -35,8 +35,8 @@ export class WordService {
     return this.httpcilent.get<Word[]>(`${this.wordUrl}?collect=true`);
   }
   //通过name搜索单词
-  searchByname(names:String):Observable<Word[]>{
-    return this.httpcilent.get<Word[]>(`${this.wordUrl}?name=names`);
+  searchByname(names:string):Observable<Word>{
+    return this.httpcilent.get<Word>(`${this.wordUrl}?name=${names}`);
   }
 
   }

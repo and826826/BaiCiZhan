@@ -2,4 +2,25 @@
     margin: 60px;
     position: relative;
     top: 40px;
+    width: 900px;
+    background: #9ccfec;
+}
+.search_div{
+    position: fixed;
+    width: 200px;
+    height: 400px;
+    background: #b9d5fa;
+    right: 5%;
+    top: 20%;
+    opacity: 0.5;  //透明度
+}
+.search{
+    position: relative;
+    padding: 50px;
+    margin: 25px;
+}
+.test{
+    position: relative;
+    margin: 20px;
+    background: chartreuse;
 }

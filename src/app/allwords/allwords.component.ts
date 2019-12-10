@@ -7,6 +7,11 @@ import { WordService } from '../word.service';
   styleUrls: ['./allwords.component.scss']
 })
 export class AllwordsComponent implements OnInit {
+  a1:string;
+  all:Word;
+  int(a :string):void {
+  this.wordservice.searchByname(a).subscribe(word=>this.all=word);
+  }
   // 决定了表的列显示顺序
   displayedColumns: string[] = ['name', 'meaning', 'example','collect',];
   allWords:Word[]
@@ -18,6 +23,7 @@ export class AllwordsComponent implements OnInit {
 
   ngOnInit() {
     this.getAllWords()
+  
   }
 
 }

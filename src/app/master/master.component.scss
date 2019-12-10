@@ -1,58 +1,82 @@
-.card{
-  margin: 40px;
-  position: relative;
-  top: 60px;
-}
-.container {
-  width: 400px;
-  max-width: 100%;
-  margin: 50px;
+.flip-container {
+  -webkit-perspective: 500;
+  -moz-perspective: 500;
+  -ms-perspective: 500;
+  perspective: 500;
+  -ms-transform: perspective(500px);
+  -moz-transform: perspective(500px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  top: 50px;
+  margin: 10px;
   display: inline-block;
-  vertical-align: top;
+  // border: 1px solid #aaa;
+  position:relative;
+}
+/*由于内层绝对定位导致高度缺少，这里显式设置了宽高*/
+.flip-container, .front, .back {
+  width: 294px;
+  height: 250px;
+  position: relative;
 }
 
-.list {
-  border: solid 1px #aaaa;
-  min-height: 60px;
-  background: white;
-  border-radius: 4px;
-  display: block;
-  overflow: hidden;
+.flip-container:hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.flip-container:hover .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  z-index: 3; /* 降级处理不支持CSS3的浏览器，只是简单的将back上升盖住front */
 }
 
-.list-item {
-  padding: 20px 10px;
-  border-bottom: solid 1px #ccc;
-  box-sizing: border-box;
-  cursor: move;
-  background: white;
-  color: black;
-  font-size: 14px;
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -ms-transition: 0.6s;
+  transition: 0.6s;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+}
+.front {
+  background:white;
+  z-index: 2;
+  text-align: center;
+}
+.back {
+  background: rgba(167, 216, 245, 0.667);
+  opacity: 1;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  text-align: center;
 }
 
-.list-item:last-child {
-  border: none;
+
+
+
+
+
+.content{
+  position: relative;
+  top: 20px;
 }
 
-/* Highlight the list item that is being dragged. */
-.cdk-drag-preview {
-  border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-              0 8px 10px 1px rgba(0, 0, 0, 0.14),
-              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+.button{
+  position: relative;
+  
 }
-
-/* Animate items as they're being sorted. */
-.cdk-drop-dragging .cdk-drag {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-/* Animate an item that has been dropped. */
-.cdk-drag-animating {
-  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.cdk-drag-placeholder {
-  opacity: 0;
-}
-

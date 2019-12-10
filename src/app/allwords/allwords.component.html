@@ -21,13 +21,20 @@
           <ng-container matColumnDef="collect">
             <th mat-header-cell *matHeaderCellDef> collect</th>
             <td mat-cell *matCellDef="let element"> {{element.collect}} </td>
-          </ng-container>
-      
-        
-      
+          </ng-container>      
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-      
-        <mat-paginator [pageSizeOptions]="[10, 10, 20,20]" showFirstLastButtons></mat-paginator>
-      </div>
+</div>
+<div class="search_div">
+  <mat-hint class="search " style="color:blue;" >查词</mat-hint>
+  
+    <mat-form-field>
+      <input matInput placeholder="输入单词"  #no > 
+    </mat-form-field>
+    <button (click)="int(no.value)"></button>
+    <div class="test">
+      <mat-hint>{{all}}</mat-hint>
+    </div>
+
+</div>

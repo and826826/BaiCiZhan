@@ -1,2 +1,13 @@
-<h1>{{collectedwords}}</h1>
-<h1>{{collectedwords}}</h1>
+<mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile *ngFor="let word of allwords">
+<div class="flip-container">
+    
+    <div class="front" ><h1 style="color:cornflowerblue;">{{word.name}}</h1></div>
+    <div class="back"><h3 >{{word.name}}</h3>
+        <h4>{{word.meaning}}</h4><h4>{{word.example}}</h4>
+        <button mat-button class="button">收藏</button>
+    </div>
+</div>
+
+</mat-grid-tile>
+</mat-grid-list>
