@@ -6,8 +6,8 @@
     <div class="back"><h3 >{{word.name}}</h3>
         <button mat-button class="button_icon" (click)="audio(word.name)"><mat-icon >volume_down</mat-icon></button>
         <!-- <audio src=""></audio> -->
-        <h4>{{word.meaning}}</h4><h4>{{word.example}}</h4>
-        <button mat-button class="button" (click)="collect(word)">收藏</button>
+        <h4>{{word.meaning}}</h4><h4>{{word.example}}</h4><mat-icon *ngIf="word.collect" class="mat_icon" style="color: rgb(241, 69, 98);">favorite</mat-icon>
+        <button mat-button class="button" (click)="collect(word)" *ngIf="!(word.collect)">收藏</button>
     </div>
 </div>
 

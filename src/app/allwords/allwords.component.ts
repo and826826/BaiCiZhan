@@ -17,7 +17,7 @@ export class AllwordsComponent implements OnInit {
   //   collect: true,
   // };
   
-  int(a :string):void {
+  search(a :string):void {
   this.wordservice.searchByname(a).subscribe(word=>this.all=word);
   }
   // 决定了表的列显示顺序

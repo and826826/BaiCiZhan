@@ -5,11 +5,16 @@
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>
-            <mat-hint style="color: cadetblue; size: 5px;">{{word.name}}</mat-hint>
+            <mat-hint style="color: cadetblue; size: 10px;">{{word.name}}</mat-hint>
           </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>{{word.example}}</div>
+          <button mat-button class="button_icon" (click)="audio(word.name)"><mat-icon >volume_down</mat-icon></button>
+          <h4>{{word.meaning}}</h4>
+          <h4>{{word.example}}</h4>
+          <div *ngIf="word.collect">
+          <button  mat-button (click)="collect(word)"><mat-icon  style="color: rgb(240, 137, 158);">favorite</mat-icon></button>
+          </div>
         </mat-card-content>
         
     </mat-card>
