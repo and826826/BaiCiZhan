@@ -18,7 +18,7 @@ export class WordService {
     return this.httpcilent.get<Word>(`${this.wordUrl}/${id}`);
   }
 
-  //添加一个单词，添加单词后要更新，否则假添加
+  //添加一个单词，添加单词后要更新
   addWord(word:Word):Observable<Word>{
     return this.httpcilent.post<Word>(this.wordUrl,word);
   }
@@ -37,6 +37,10 @@ export class WordService {
   //通过name搜索单词
   searchByname(names:string):Observable<Word>{
     return this.httpcilent.get<Word>(`${this.wordUrl}?name=${names}`);
+  }
+  //修改是否为收藏单词
+  changeColecte(word :Word):Observable<Word>{
+    return this.httpcilent.put<Word>(`${this.wordUrl}/${word.id}`, word);
   }
 
   }

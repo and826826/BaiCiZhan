@@ -32,8 +32,8 @@
     <mat-form-field>
       <input matInput placeholder="输入单词"  #no > 
     </mat-form-field>
-    <button (click)="int(no.value)"></button>
-    <div class="test">
+    <button (click)="int(no.value)" mat-button ><mat-icon >search</mat-icon></button>
+    <div class="test" *ngIf="all">
       <mat-hint>{{all}}</mat-hint>
     </div>
 

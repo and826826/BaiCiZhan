@@ -8,7 +8,15 @@ import { WordService } from '../word.service';
 })
 export class AllwordsComponent implements OnInit {
   a1:string;
-  all:Word;
+  all:Word
+  // all:Word={
+  //   id: '1',
+  //   name: 'test',
+  //   meaning: 'String',
+  //   example: 'String',
+  //   collect: true,
+  // };
+  
   int(a :string):void {
   this.wordservice.searchByname(a).subscribe(word=>this.all=word);
   }

@@ -4,8 +4,10 @@
     
     <div class="front" ><h1 style="color:cornflowerblue;">{{word.name}}</h1></div>
     <div class="back"><h3 >{{word.name}}</h3>
+        <button mat-button class="button_icon" (click)="audio(word.name)"><mat-icon >volume_down</mat-icon></button>
+        <!-- <audio src=""></audio> -->
         <h4>{{word.meaning}}</h4><h4>{{word.example}}</h4>
-        <button mat-button class="button">收藏</button>
+        <button mat-button class="button" (click)="collect(word)">收藏</button>
     </div>
 </div>
 
