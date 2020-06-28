@@ -21,6 +21,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## wordservice
 wordservice服务具有添加单词，通过id号删除单词，更新词库，通过单词字母查找单词。
 
+## 页面效果
+
+### 首页
+
+![首页]("./src/assets/1.png")
+
 
 
 

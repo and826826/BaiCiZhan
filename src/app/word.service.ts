@@ -18,11 +18,11 @@ export class WordService {
     return this.httpcilent.get<Word>(`${this.wordUrl}/${id}`);
   }
 
-  //添加一个单词，添加单词后要更新
+  //添加一个单词
   addWord(word:Word):Observable<Word>{
     return this.httpcilent.post<Word>(this.wordUrl,word);
   }
-  //更新，添加后比执行
+  //更新
   updateWord(word:Word):Observable<Word>{
     return this.httpcilent.put<Word>(this.wordUrl,word);
   }

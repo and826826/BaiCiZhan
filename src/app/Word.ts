@@ -1,8 +1,8 @@
 class Word{
-    id: String;
-    name: String;
-    meaning: String;
-    example: String;
+    id: string ;
+    name: string;
+    meaning: string;
+    example: string;
     collect: boolean;
 
 }
