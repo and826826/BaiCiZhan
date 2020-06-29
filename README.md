@@ -25,21 +25,21 @@ wordservice服务具有添加单词，通过id号删除单词，更新词库，�
 
 ### 首页
 
-![首页]("https://raw.githubusercontent.com/and826826/Angular/master/src/assets/1.png")
+![首页](https://github.com/and826826/Angular/blob/master/src/assets/1.png)
 
 ### 查看所有单词
 
-![所有单词]("https://github.com/and826826/Angular/blob/master/src/assets/2.png")
+![所有单词](https://github.com/and826826/Angular/blob/master/src/assets/2.png)
 
 ### 查看所有星标单词
 用户可以通过点击单词卡片上的爱心实现收藏与取消收藏
 
-![所有单词]("https://github.com/and826826/Angular/blob/master/src/assets/3.png")
+![所有单词](https://github.com/and826826/Angular/blob/master/src/assets/3.png)
 
 ### 复习单词
 
 卡片正面上都只有单词本身，在鼠标滑过单词卡片时卡片翻转，显示单词的详细信息
-![所有单词]("https://github.com/and826826/Angular/blob/master/src/assets/4.png")
+![所有单词](https://github.com/and826826/Angular/blob/master/src/assets/4.png)
 
 
 
