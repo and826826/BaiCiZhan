@@ -25,7 +25,7 @@ wordservice服务具有添加单词，通过id号删除单词，更新词库，�
 
 ### 首页
 
-![首页]("https://github.com/and826826/Angular/blob/master/src/assets/1.png")
+![首页]("https://raw.githubusercontent.com/and826826/Angular/master/src/assets/1.png")
 
 ### 查看所有单词
 
